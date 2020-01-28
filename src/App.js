@@ -6,6 +6,16 @@ import Infos from './components/Infos';
 import About from './components/About';
 import Navbar from './components/Navbar';
 
+/*
+  TODO 
+
+  - make a login system
+  - make an express app
+  - connect to db
+  -get routes working
+
+*/
+
 function App() {
   return (
     <Router>
