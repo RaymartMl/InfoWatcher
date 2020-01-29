@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import InfoItem from './InfoItem';
+import InfoContext from '../context/info/infoContext';
 
 const Infos = () => {
+  const infoContext = useContext(InfoContext);
+  const { infos } = infoContext;
   return (
-    <div>
-      {/* TODO make a info list and default infos */}
-      <p className="lead text-center pt-5 font-weight-bold">
-        This is the place for InfoList
-      </p>
+    <div className="mt-5 d-flex flex row justify-content-around">
+      {infos.map(info => (
+        <InfoItem info={info} key={info.id} />
+      ))}
     </div>
   );
 };

@@ -6,6 +6,8 @@ import Infos from './components/Infos';
 import About from './components/About';
 import Navbar from './components/Navbar';
 
+import InfoState from './context/info/InfoState';
+
 /*
   TODO 
 
@@ -18,18 +20,20 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <Router>
-      <Fragment>
-        <Navbar />
-        <div className="container">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/infos" component={Infos} />
-            <Route exact path="/about" component={About} />
-          </Switch>
-        </div>
-      </Fragment>
-    </Router>
+    <InfoState>
+      <Router>
+        <Fragment>
+          <Navbar />
+          <div className="container">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/infos" component={Infos} />
+              <Route exact path="/about" component={About} />
+            </Switch>
+          </div>
+        </Fragment>
+      </Router>
+    </InfoState>
   );
 }
 

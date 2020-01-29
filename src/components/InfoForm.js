@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+
+import InfoContext from '../context/info/infoContext';
 
 const InfoForm = () => {
+  const infoContext = useContext(InfoContext);
+  const { addInfo } = infoContext;
+
   const [info, setInfo] = useState({
     name: '',
     text: '',
@@ -16,8 +21,11 @@ const InfoForm = () => {
 
   const onSubmit = e => {
     e.preventDefault();
-    // TODO make a submit state
+    addInfo(info);
+    clearInfo();
   };
+
+  const clearInfo = () => setInfo({ name: '', text: '', date: '' });
 
   return (
     <div>
@@ -32,6 +40,7 @@ const InfoForm = () => {
             name="name"
             onChange={onChange}
             value={info.name}
+            required
           />
         </div>
         <div className="form-group">
@@ -43,6 +52,7 @@ const InfoForm = () => {
             name="text"
             onChange={onChange}
             value={info.text}
+            required
           />
         </div>
         <div className="form-group">
@@ -51,16 +61,17 @@ const InfoForm = () => {
             type="date"
             name="date"
             id="date"
-            name="date"
             className="form-control"
             onChange={onChange}
             value={info.date}
+            required
           />
         </div>
         <input
           type="submit"
           value="Submit Info"
           className="btn btn-block btn-outline-dark"
+          required
         />
       </form>
     </div>
