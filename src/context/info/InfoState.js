@@ -8,28 +8,28 @@ const InfoState = props => {
   const initialState = [
     {
       id: 1,
-      name: 'Thalia Maa',
+      name: 'Jordan Mosby',
       text:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ipsam voluptas nisi molestias est vitae corporis libero autem aspernatur! Pariatur?',
       date: '01/20/2020'
     },
     {
       id: 2,
-      name: 'Fernan Maa',
+      name: 'Ted Baldwin',
       text:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ipsam voluptas nisi molestias est vitae corporis libero autem aspernatur! Pariatur?',
       date: '10/29/2002'
     },
     {
       id: 3,
-      name: 'David Maa',
+      name: 'Barney Stinston',
       text:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ipsam voluptas nisi molestias est vitae corporis libero autem aspernatur! Pariatur?',
       date: '07/21/2012'
     },
     {
       id: 4,
-      name: 'Gwin Maa',
+      name: 'Lily Geller',
       text:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ipsam voluptas nisi molestias est vitae corporis libero autem aspernatur! Pariatur?',
       date: '12/23/2000'
